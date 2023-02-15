@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/pay}" th:object="${payment}" method="post">
+        <div>
+            <label> Amount
+                <input th:field="*{amount}">
+            </label>
+        </div>
+        <div>
+            <label> orderInfo
+                <input th:field="*{orderInfo}">
+            </label>
+        </div>
+        <input type="submit" th:value="Submit">
+    </form>
+</body>
+</html>
